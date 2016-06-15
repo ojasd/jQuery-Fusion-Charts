@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Charts using FusionCharts</title>
+    <!-- jQuery core js file -->
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <!-- FusionCharts core package file -->
+    <script type="text/javascript" src="js/fusioncharts.js"></script>
+    <script type="text/javascript" src="js/fusioncharts.charts.js"></script>
+    <!-- FusionCharts jQuery charts plugin -->
+    <script type="text/javascript" src="js/fusioncharts-jquery-plugin.js"></script>
+    <!-- chart script -->
+    <script type="text/javascript" >
+
+        (function() {
+            $('#jQuery-chart').insertFusionCharts({
+                type: "doughnut2d",
+                width: "450",
+                height: "400",
+                dataFormat: "json",
+                dataSource: {
+                    "chart": {
+                        // caption cosmetics
+                        "caption": "Super Market Sales Distribution",
+                        "captionFontSize": "20",
+                        "captionFontBold": "0",
+                        "captionPadding": "15",
+                        "alignCaptionWithCanvas": "1",
+                        // sub-caption cosmetics
+                        "subCaption": "By Categories",
+                        "subCaptionFontSize": "15",
+                        "subCaptionFontBold": "0",
+
+                        // doughnut cosmetics
+                        "paletteColors": "#5793F3,#1BD3B47,#FD9C35,#D4DF5A",
+                        "doughnutRadius": "55",
+                        "pieRadius": "85",
+                        "defaultCenterLabel": "Total Sales: $64.08K",
+                        "centerLabel": "Sales for $label: $value",
+                        "centerLabelBold": "0",
+                        "use3DLighting": "0",
+                        "showBorder": "0",
+                        "showTooltip": "1",
+                        "showPlotBorder": "0",
+
+                        // chart options and cosmetics
+                        "bgColor": "#000000",
+                        "bgAlpha": "80",
+                        "baseFontColor": "#FFFFFF",
+                        "baseFontSize": "13",
+                        "startingAngle": "313",
+                        "numberPrefix": "$",
+                        "decimals": "0",
+                        "smartLineThickness": "1.3",
+
+                        // tooltip cosmetics
+                        "toolTipBgColor": "#000000",
+                        "toolTipBgAlpha": "73",
+                        "toolTipPadding": "9",
+                        "toolTipBorderColor": "#FFFFFF",
+                        "toolTipBorderAlpha": "62",
+                        "toolTipBorderThickness": "1",
+                        "toolTipBorderRadius": "3",
+                        "toolTipSepChar": " - ",
+
+                        // legend cosmetics
+                        "showLegend": "1",
+                        "legendItemFontBold": "0",
+                        "legendBgAlpha": "0",
+                        "legendPadding": "20"
+                    },
+
+                    "data": [{ // data array
+                        "label": "Food",
+                        "value": "14633"
+                    }, {
+                        "label": "Apparels",
+                        "value": "28504"
+                    }, {
+                        "label": "Electronics",
+                        "value": "4910"
+                    }, {
+                        "label": "Household",
+                        "value": "10507"
+                    }]
+                }
+            });
+        }());
+
+    </script>
+</head>
+<body>
+<div id="jQuery-chart">Hello</div>
+</body>
+</html>
